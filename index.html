@@ -3,9 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LevPixel Desenvolvedores cria sites profissionais, responsivos e otimizados para marcas, empresas e profissionais que querem crescer no digital.">
+    <meta name="theme-color" content="#000000">
+    <meta property="og:title" content="LevPixel Desenvolvedores">
+    <meta property="og:description" content="Criação de sites profissionais, responsivos e otimizados para presença digital, portfólios, portais, blogs e e-commerce.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="Levpapis.png">
+    <link rel="canonical" href="https://levpixel.vercel.app/">
     <link rel="icon" href="favicon_levpixel_50x50.ico" type="image/x-icon">
     <link rel="shortcut icon" href="favicon_levpixel_50x50.ico" type="image/x-icon">
-    <title>LevPixel</title>
+    <title>LevPixel Desenvolvedores | Sites profissionais e responsivos</title>
     <link href="lev.css" rel="stylesheet">
 
 </head>
@@ -14,7 +21,7 @@
     <header class="header" id="header">
         <a href="#home" class="logo-container">
             <div class="logo">
-            <img src="Levpapis.png" class="levpixel logo" alt="levpixel logo">
+            <img src="Levpapis.png" class="logo-image" alt="LevPixel Desenvolvedores">
             </div>
         </a>
         
@@ -22,79 +29,79 @@
             <a href="#home" class="menu-item active">Início</a>
             <a href="#about" class="menu-item">Sobre</a>
             <a href="#contact" class="menu-item">Contato</a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="menu-item external">GitHub</a>
+            <a href="https://github.com/levpixel" target="_blank" rel="noopener noreferrer" class="menu-item external">GitHub</a>
         </nav>
         
-        <div class="menu-toggle" id="menuToggle">
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu" aria-controls="mainMenu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>
-        </div>
+        </button>
     </header>
 
     <!-- Home Section -->
     <section id="home" class="section">
         <div class="coverflow-wrapper">
             <div class="info">
-                <h2 id="current-title">Mountain Landscape</h2>
-                <p id="current-description">Majestic peaks covered in snow during golden hour</p>
+                <h1 id="current-title">Sites Profissionais</h1>
+                <p id="current-description">Presença online com credibilidade, visibilidade e foco em resultados</p>
             </div>
 
             <div class="coverflow-container" tabindex="0">
                 <div class="coverflow" id="coverflow">
                     <div class="coverflow-item" data-index="0">
                         <div class="cover image-loading">
-                            <img src="image1.jpg" alt="Mountain Landscape" loading="lazy">
+                            <img src="image1.jpg" alt="Exemplo de site profissional criado pela LevPixel" loading="lazy">
                         </div>
                         <div class="reflection"></div>
                     </div>
                     <div class="coverflow-item" data-index="1">
                         <div class="cover image-loading">
-                            <img src="image2.png" alt="Forest Path" loading="lazy">
+                            <img src="image2.png" alt="Exemplo de cardápio digital responsivo" loading="lazy">
                         </div>
                         <div class="reflection"></div>
                     </div>
                     <div class="coverflow-item" data-index="2">
                         <div class="cover image-loading">
-                            <img src="image3.png" alt="Lake Reflection" loading="lazy">
+                            <img src="image3.png" alt="Exemplo de loja online personalizada" loading="lazy">
                         </div>
                         <div class="reflection"></div>
                     </div>
                     <div class="coverflow-item" data-index="3">
                         <div class="cover image-loading">
                             <a href="https://prototico-portal.vercel.app/" style="text-decoration: none;">
-                                <img src="image4.png" alt="Ocean Sunset" loading="lazy">
+                                <img src="image4.png" alt="Exemplo de portal de notícias desenvolvido pela LevPixel" loading="lazy">
                             </a>
                         </div>
                         <div class="reflection"></div>
                     </div>
                     <div class="coverflow-item" data-index="4">
                         <div class="cover image-loading">
-                            <img src="image5.png" alt="Desert Dunes" loading="lazy">
+                            <img src="image5.png" alt="Exemplo de blog profissional" loading="lazy">
                         </div>
                         <div class="reflection"></div>
                     </div>
                     <div class="coverflow-item" data-index="5">
                         <div class="cover image-loading">
-                            <img src="image6.png" alt="Starry Night" loading="lazy">
+                            <img src="image6.png" alt="Exemplo de página profissional para negócios" loading="lazy">
                         </div>
                         <div class="reflection"></div>
                     </div>
                     <div class="coverflow-item" data-index="6">
                         <div class="cover image-loading">
-                            <img src="image7.png" alt="Waterfall" loading="lazy">
+                            <img src="image7.png" alt="Exemplo de e-commerce moderno" loading="lazy">
                         </div>
                         <div class="reflection"></div>
                     </div>
                 </div>
 
-                <button class="nav-button prev" onclick="navigate(-1)">‹</button>
-                <button class="nav-button next" onclick="navigate(1)">›</button>
+                <button class="nav-button prev" type="button" onclick="navigate(-1)" aria-label="Projeto anterior">‹</button>
+                <button class="nav-button next" type="button" onclick="navigate(1)" aria-label="Próximo projeto">›</button>
 
                 <div class="dots-container" id="dots"></div>
                 
                 <!-- Play/Pause Button -->
-                <button class="play-pause-button" id="playPauseBtn" onclick="toggleAutoplay()">
+                <button class="play-pause-button" id="playPauseBtn" type="button" onclick="toggleAutoplay()" aria-label="Pausar carrossel">
                     <span class="play-icon">▶</span>
                     <span class="pause-icon" style="display: none;">❚❚</span>
                 </button>
@@ -107,7 +114,7 @@
         <div class="about-content">
             <div class="about-header">
                 <h2>LevPixel Desenvolvedores</h2>
-                <p>Na Lev Pixel, criamos experiências digitais que destacam sua marca e elevam sua presença online.</p>
+                <p>Na LevPixel, criamos experiências digitais que destacam sua marca e elevam sua presença online.</p>
             </div>
             
             <div class="about-main">
@@ -118,17 +125,17 @@
                             <div class="corner-decoration bottom-right"></div>
                             
                             <div class="showcase-logo">
-                                <img src="Levpapis.png" class="levpixel logo" alt="levpixel logo">
+                                <img src="Levpapis.png" class="logo-image" alt="LevPixel Desenvolvedores">
                             </div>
                             
                             <!--h3 class="showcase-title">LevPixel</h3-->
-                            <p class="showcase-subtitle">A Lev Pixel nasceu com o propósito de transformar o digital em uma extensão real de cada negócio.</p>
+                            <p class="showcase-subtitle">A LevPixel nasceu com o propósito de transformar o digital em uma extensão real de cada negócio.</p>
                             
                             <div class="showcase-badges">
                                 <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer" class="badge">HTML5</a>
                                 <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer" class="badge">CSS3</a>
                                 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer" class="badge">JavaScript</a>
-                                <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design" target="_blank" rel="noopener noreferrer" class="badge">Responsive</a>
+                                <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Responsive_Design" target="_blank" rel="noopener noreferrer" class="badge">Responsivo</a>
                             </div>
                         </div>
                     </div>
@@ -136,13 +143,13 @@
                 
                 <div class="about-info">
                     <h3>Quem somos nós</h3>
-                    <p> A Lev Pixel nasceu com o propósito de transformar o digital em uma extensão real de cada negócio. Somos uma equipe apaixonada por inovação, design e tecnologia, que acredita que cada projeto é uma nova oportunidade de contar histórias através da web.</p>
-                    <p> Nossa missão é elevar a presença digital de empresas e profissionais, conectando marcas e pessoas por meio da tecnologia.</p>
+                    <p>A LevPixel nasceu com o propósito de transformar o digital em uma extensão real de cada negócio. Somos uma equipe apaixonada por inovação, design e tecnologia, que acredita que cada projeto é uma nova oportunidade de contar histórias através da web.</p>
+                    <p>Nossa missão é elevar a presença digital de empresas e profissionais, conectando marcas e pessoas por meio da tecnologia.</p>
                     
                     <ul class="feature-list">
-                        <li>Design exclusivo: nada de modelos prontos — criamos sites únicos, pensados para cada marca</li>
-                        <li> Responsividade total: seu site perfeito em qualquer tela, seja celular, tablet ou computador</li>
-                        <li> Desempenho otimizado: carregamento rápido e estrutura pronta para SEO</li>
+                        <li>Design exclusivo: nada de modelos prontos, criamos sites únicos, pensados para cada marca</li>
+                        <li>Responsividade total: seu site perfeito em qualquer tela, seja celular, tablet ou computador</li>
+                        <li>Desempenho otimizado: carregamento rápido e estrutura pronta para SEO</li>
                         <li>Atendimento personalizado: cada cliente é tratado como parceiro de projeto, com acompanhamento de ponta a ponta</li>
                         <li>Foco em resultados: mais do que um site bonito, entregamos uma ferramenta que gera conversões e fortalece sua presença digital</li>
                     </ul>
@@ -235,8 +242,8 @@
                             </div>
                             <div class="contact-text">
                                 <h4>Horário de Funcionamento</h4>
-                                <p>Segunda-Feira - Sexta-Feira: 9:00  - 22:00 BRA</p>
-                                <p>Sábado : 08:00 - 12:00 BRA</p>
+                                <p>Segunda-feira a sexta-feira: 9h às 22h</p>
+                                <p>Sábado: 8h às 12h</p>
                             </div>
                         </div>
                     </div>
@@ -285,10 +292,33 @@
                         <button type="submit" class="submit-btn">Enviar Mensagem</button>
 
                         <input type="hidden" name="accessKey" value="sf_g9f9aicfc7mh3klkgh56c99k">
-                        <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/Oficial/index.html">
+                        <input type="hidden" name="redirectTo" value="https://levpixel.vercel.app/#contact">
                     </form>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Privacy Section -->
+    <section id="privacy" class="legal-section" aria-labelledby="privacy-title">
+        <div class="legal-content">
+            <h2 id="privacy-title">Política de Privacidade</h2>
+            <p>A LevPixel Desenvolvedores respeita sua privacidade e utiliza as informações enviadas pelo formulário de contato apenas para responder solicitações, entender necessidades de projeto e manter comunicação relacionada ao atendimento solicitado.</p>
+            <p>Podemos coletar nome, e-mail, assunto e mensagem informados voluntariamente pelo visitante. Esses dados não são vendidos, alugados ou compartilhados para fins comerciais de terceiros.</p>
+            <p>O envio do formulário pode utilizar serviços externos de processamento de mensagens, como ferramentas de formulário e hospedagem. Esses serviços recebem somente os dados necessários para entregar a mensagem à equipe LevPixel.</p>
+            <p>Você pode solicitar correção ou exclusão dos seus dados entrando em contato pelo e-mail levpixeldesenvolvedores@gmail.com.</p>
+            <p>Esta política pode ser atualizada para refletir melhorias no site, mudanças legais ou novos recursos. A versão publicada nesta página é a referência vigente.</p>
+        </div>
+    </section>
+
+    <!-- Terms Section -->
+    <section id="terms" class="legal-section" aria-labelledby="terms-title">
+        <div class="legal-content">
+            <h2 id="terms-title">Termos de Uso</h2>
+            <p>Ao navegar neste site, você concorda em utilizar as informações apresentadas de forma responsável. O conteúdo tem finalidade institucional e comercial, apresentando serviços, canais de contato e exemplos de soluções digitais.</p>
+            <p>Textos, identidade visual, imagens e demais elementos do site pertencem à LevPixel Desenvolvedores ou são utilizados para demonstração de portfólio. A reprodução sem autorização não é permitida.</p>
+            <p>Links externos, como redes sociais, documentação técnica e projetos publicados, podem levar a plataformas de terceiros com regras próprias de uso e privacidade.</p>
+            <p>Para dúvidas sobre estes termos, fale conosco pelo e-mail levpixeldesenvolvedores@gmail.com.</p>
         </div>
     </section>
 
@@ -299,8 +329,8 @@
                 © 2025 LevPixel Desenvolvedores - Todos os direitos reservados.
             </div>
             <div class="footer-links">
-                <a href="#privacy" onclick="event.preventDefault(); alert('Privacy Policy page would go here');">Privacy Policy</a>
-                <a href="#terms" onclick="event.preventDefault(); alert('Terms of Service page would go here');">Terms of Service</a>
+                <a href="#privacy">Política de Privacidade</a>
+                <a href="#terms">Termos de Uso</a>
             </div>
         </div>
     </footer>

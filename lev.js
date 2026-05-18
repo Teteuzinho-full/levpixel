@@ -16,6 +16,7 @@
         menuToggle.addEventListener('click', () => {
             menuToggle.classList.toggle('active');
             mainMenu.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', mainMenu.classList.contains('active') ? 'true' : 'false');
         });
 
         // Close mobile menu when clicking on menu items (except external links)
@@ -23,6 +24,7 @@
             item.addEventListener('click', (e) => {
                 menuToggle.classList.remove('active');
                 mainMenu.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
             });
         });
 
@@ -31,6 +33,7 @@
             if (!menuToggle.contains(e.target) && !mainMenu.contains(e.target)) {
                 menuToggle.classList.remove('active');
                 mainMenu.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
             }
         });
 
@@ -49,20 +52,20 @@
                 description: "Mude seu negócio com uma loja online personalizada e eficiente"
             },
             {
-                title: "Noticiario Online",
-                description: "Portal de notícias rápido, organizado e pronto para grandes acessos"
+                title: "Noticiário Online",
+                description: "Portal de notícias rápido, organizado e preparado para grandes acessos"
             },
             {
                 title: "Blogs",
                 description: "Blog profissional para criar autoridade e engajar seu público"
             },
             {
-                title: "Pagina Profissional",
+                title: "Página Profissional",
                 description: "Página profissional que transmite confiança e gera oportunidades"
             },
             {
                 title: "E-commerce",
-                description: "E-commerce moderno, segura e focada em vendas"
+                description: "E-commerce moderno, seguro e focado em vendas"
             }
         ];
 
@@ -97,8 +100,11 @@
                 const absOffset = Math.abs(offset);
                 const sign = Math.sign(offset);
                 
-                let translateX = offset * 220;
-                let translateZ = -absOffset * 200;
+                const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+                const spacing = viewportWidth <= 360 ? 112 : viewportWidth <= 480 ? 128 : viewportWidth <= 768 ? 170 : 220;
+                const depth = viewportWidth <= 480 ? 135 : viewportWidth <= 768 ? 165 : 200;
+                let translateX = offset * spacing;
+                let translateZ = -absOffset * depth;
                 let rotateY = -sign * Math.min(absOffset * 60, 60);
                 let opacity = 1 - (absOffset * 0.2);
                 let scale = 1 - (absOffset * 0.1);
@@ -249,6 +255,7 @@
             isPlaying = true;
             playIcon.style.display = 'none';
             pauseIcon.style.display = 'block';
+            document.getElementById('playPauseBtn').setAttribute('aria-label', 'Pausar carrossel');
         }
 
         function stopAutoplay() {
@@ -259,6 +266,7 @@
             isPlaying = false;
             playIcon.style.display = 'block';
             pauseIcon.style.display = 'none';
+            document.getElementById('playPauseBtn').setAttribute('aria-label', 'Reproduzir carrossel');
         }
 
         function toggleAutoplay() {
